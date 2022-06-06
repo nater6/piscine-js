@@ -1,12 +1,12 @@
 const escapeStr = "\' \` \\ \/ \""
-const arr = [4, '2']
-const obj = {
+const UnfrozenArr = [4, '2']
+const UnfrozenObj = {
     str: 'abc',
     num: 123,
     bool: true,
     undef: undefined
 }
-const nested = {
+const UnfrozenNested = {
     arr: [4, undefined, '2'],
     obj: {
         str: 'abc',
@@ -15,6 +15,6 @@ const nested = {
     }
 }
 
-arr = Object.freeze(arr);
-obj = Object.freeze(obj);
-nested = Object.freeze(nested);
+const arr = Object.freeze(UnfrozenArr);
+const obj = Object.freeze(UnfrozenObj);
+const nested = Object.freeze(UnfrozenNested);
