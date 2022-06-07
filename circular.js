@@ -1,3 +1,2 @@
-const circular = {
-    circular : Object.assign({}, circular)
-}
+const circular = {}
+circular.circular = circular
