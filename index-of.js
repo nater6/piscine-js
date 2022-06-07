@@ -10,7 +10,7 @@ const indexOf = (arr, val, start) => {
         }
         i++
     }
-    return -2
+    return -1
 }
 
 const lastIndexOf = (arr, val) => {
@@ -18,7 +18,7 @@ const lastIndexOf = (arr, val) => {
     var revArr = arr.reverse();
     //call index of on revArr
     let res = revArr.length - indexOf(revArr, val)
-    return res
+    return res-1
 }
 
 const includes = (arr, val) => {
