@@ -9,9 +9,11 @@ const repeat = (str, num) => {
         number = str
         string = str
     }
-    
+    var res = ''
     //loop and return the value each time
     for (let i = 0; i < number; i++){
-        return string
+        res += string
     }
+
+    return res
 }
