@@ -1,17 +1,9 @@
-const person = {
-    name: 'Rick',
-    age: 78,
-    country: 'FR',
-}
-const clone1 = {
-    name: 'Rick',
-    age: 77,
-    country: 'US',
-}
-const clone2 = {
-    name: 'Rick',
-    age: 77,
-    country: 'US',
-}
+
+const clone1 = Object.assign(person)
+Object.freeze(clone1)
+
+const clone2 = Object.assign(person)
+Object.freeze(clone2)
+
 const samePerson = Object.assign(person)
 
