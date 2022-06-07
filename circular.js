@@ -1,3 +1,3 @@
 const circular = {
-    circular : circular
+    circular : Object.assign({}, circular)
 }
