@@ -1,11 +1,5 @@
 const indexOf = (arr, val) => {
-
-
-    if (start != null) {
-        let i = start
-    } else {
-        let i = 0
-    }
+    let i = 0;
     //loop thorugh the array
     while (i < arr.length) {
         if (arr[i] == val) {
