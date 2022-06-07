@@ -1,4 +1,4 @@
-const repeat = (str, num) {
+const repeat = (str, num) => {
     var number = 0
     var string = ''
     //make sure the variables have the correct values
