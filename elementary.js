@@ -13,7 +13,7 @@ const multiply = (a, b) => {
         res += b
     }
     if (aSign != bSign) {
-        return res * -1
+        return -res
     } else {
         return res
     }
@@ -36,7 +36,7 @@ const divide = (a, b) => {
     }
 
     if (aSign != bSign) {
-        return div * -1
+        return -div 
     } else {
         return div
     }
@@ -65,7 +65,7 @@ const modulo = (a, b) => {
     // the modulo is the difference between a and i
     res = a - i
     if (aSign < 0) {
-        res *= -1
+        res = -res
     }
 
     return res
