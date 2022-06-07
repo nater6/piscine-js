@@ -6,11 +6,7 @@ const indexOf = (arr, val, start) => {
     //loop thorugh the array
     while (i < arr.length) {
         if (arr[i] == val) {
-            if (start != null) {
-                return i - start
-            } else {
-                return i
-            }
+            return i
         }
         i++
     }
