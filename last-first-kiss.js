@@ -10,6 +10,6 @@ function last(arg) {
 function kiss(arg) {
     const f = first(arg)
     const l = last(arg)
-    const res = [f, l]
+    const res = [l, f]
     return res
 }
