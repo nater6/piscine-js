@@ -1,4 +1,4 @@
-const repeat = (str, num) => {
+function repeat (str, num) {
     var number = 0
     var string = ''
     //make sure the variables have the correct values
@@ -15,4 +15,4 @@ const repeat = (str, num) => {
         res = res + string
     }
     return res
-};
+}
