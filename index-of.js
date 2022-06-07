@@ -18,7 +18,7 @@ const lastIndexOf = (arr, val) => {
     var revArr = arr.reverse();
     //call index of on revArr
     let res = revArr.length - indexOf(revArr, val)
-    return res - 1
+    return res - 2
 }
 
 const includes = (arr, val) => {
