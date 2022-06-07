@@ -1,5 +1,5 @@
 function first(arg) {
-    return
+    return arg[0]
 }
 
 function last(arg) {
