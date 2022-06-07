@@ -2,7 +2,7 @@ const repeat = (str, num) => {
     var number = 0
     var string = ''
     //make sure the variables have the correct values
-    if (num === 'number'){
+    if (num === 'number') {
         number = num
         string = str
     } else {
@@ -11,9 +11,8 @@ const repeat = (str, num) => {
     }
     var res = ''
     //loop and return the value each time
-    for (let i = 0; i < number; i++){
+    for (let i = 0; i < number; i++) {
         res = res + string
     }
-
     return res
-}
+};
