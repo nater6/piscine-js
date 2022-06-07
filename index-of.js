@@ -17,7 +17,7 @@ const lastIndexOf = (arr, val, start) => {
     //reverse the array
     var revArr = arr.reverse();
     //call index of on revArr
-    let res = revArr.length - indexOf(revArr, val)
+    let res = revArr.length - indexOf(revArr, val, start)
     return res - 1
 }
 
