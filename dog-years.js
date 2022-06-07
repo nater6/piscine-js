@@ -32,7 +32,7 @@ function dogYears(planet, age) {
             break;
         case 'neptune':
             nepAge = earthAge / 164.79132
-            return parseFloat(nepAge.toFixed(2)
+            return parseFloat(nepAge.toFixed(2))
             break;
     }
 }
