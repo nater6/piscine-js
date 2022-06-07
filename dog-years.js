@@ -1,6 +1,6 @@
 function dogYears(planet, age) {
     //calculate the earth age of the dog
-    const earthAge = age / 31557600
+    const earthAge = (age / 31557600) * 7
 
     switch (planet) {
         case 'earth':
