@@ -1,6 +1,12 @@
-const slice = (val, num) => {
+const slice = (val, num, num2) => {
     if (Array.isArray(val)) {
         if (num >= 0) {
+            if (num2 != null) {
+                for (let i = num; i < num2; i++) {
+                    res.push(val[i])
+                }
+                return res
+            } 
             //create an empty slice to return the new value
             let res = [];
             //Loop through the array until the end, with i as num initially
@@ -18,6 +24,14 @@ const slice = (val, num) => {
         }
     } else {
         if (num >= 0) {
+            if (num2 != null) {
+                let res = '';
+                //Loop through the array until the end, with i as num initially
+                for (let i = num; i < num2; i++) {
+                    res += val[i]
+                }
+                return res
+            } 
             //create an empty slice to return the new value
             let res = '';
             //Loop through the array until the end, with i as num initially
