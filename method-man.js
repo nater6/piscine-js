@@ -4,6 +4,7 @@ function words(str) {
 
 function sentence(arr) {
     const sent = arr.join(" ");
+    return sent
 }
 
 function yell(str) {
