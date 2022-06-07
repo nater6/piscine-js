@@ -13,9 +13,9 @@ const multiply = (a, b) => {
         res += b
     }
     if (aSign != bSign) {
-        return -res
+        return parseFloat(-res)
     } else {
-        return res
+        return parseFloat(res)
     }
 }
 
@@ -36,9 +36,9 @@ const divide = (a, b) => {
     }
 
     if (aSign != bSign) {
-        return -div 
+        return parseFloat(-div) 
     } else {
-        return div
+        return parseFloat(div)
     }
 
 
@@ -68,5 +68,5 @@ const modulo = (a, b) => {
         res = -res
     }
 
-    return res
+    return parseFloat(res)
 }
