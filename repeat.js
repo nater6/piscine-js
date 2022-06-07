@@ -12,7 +12,7 @@ const repeat = (str, num) => {
     var res = ''
     //loop and return the value each time
     for (let i = 0; i < number; i++){
-        res += string
+        res = res + string
     }
 
     return res
