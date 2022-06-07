@@ -1,9 +1,7 @@
 const indexOf = (arr, val, start) => {
-
+    let i = 0
     if (start != null) {
-        let i = start
-    } else {
-        let i = 0
+        i = start
     }
     //loop thorugh the array
     while (i < arr.length) {
