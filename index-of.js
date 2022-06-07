@@ -10,7 +10,7 @@ const indexOf = (arr, val, start) => {
         }
         i++
     }
-    return -1
+    return -2
 }
 
 const lastIndexOf = (arr, val) => {
