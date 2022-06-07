@@ -1,6 +1,6 @@
 const slice = (val, num) => {
     if (Array.isArray(val)) {
-        if (number >= 0) {
+        if (num >= 0) {
             //create an empty slice to return the new value
             let res = [];
             //Loop through the array until the end, with i as num initially
@@ -17,7 +17,7 @@ const slice = (val, num) => {
             return res.reverse()
         }
     } else {
-        if (number >= 0) {
+        if (num >= 0) {
             //create an empty slice to return the new value
             let res = '';
             //Loop through the array until the end, with i as num initially
