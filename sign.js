@@ -8,7 +8,7 @@ function sign(n) {
     }
 }
 
-function samesign(n1, n2) {
+function sameSign(n1, n2) {
     if (sign(n1) == sign(n2)) {
         return true
     } else {
