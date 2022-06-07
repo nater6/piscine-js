@@ -5,7 +5,7 @@ is.bool = (b) => (typeof b === 'boolean');
 is.undef = (u) => (typeof u === 'undefined');
 is.def = (d) => !(typeof u === 'undefined');
 is.arr = (a) => (Array.isArray(a));
-is.obj = (o) => (typeof o === 'object') || (typeof o !== null) ;
+is.obj = (o) => (typeof o === 'object') || (typeof o === null) ;
 is.fun = (f) => (typeof f === 'function');
 is.truthy = (t) => (t == true);
 is.falsy = (f) => (f == false);
