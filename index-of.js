@@ -14,11 +14,17 @@ const indexOf = (arr, val, start) => {
 }
 
 const lastIndexOf = (arr, val, start) => {
-    //reverse the array
-    var revArr = arr.reverse();
-    //call index of on revArr
-    let res = revArr.length - indexOf(revArr, val, start)
-    return res - 1
+    let i = 0
+    if (start != null) {
+        i = start
+    }
+    let res = -1
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == val) {
+            res = i
+        }
+    }
+    return res
 }
 
 const includes = (arr, val) => {
