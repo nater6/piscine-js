@@ -27,6 +27,8 @@ const divide = (a, b) => {
     //make a and b absolute values
     a = Math.abs(a)
     b = Math.abs(b)
+
+   
     
     let div = 0
     let i = 0
@@ -34,6 +36,7 @@ const divide = (a, b) => {
         i += b
         div++
     }
+    div--
 
     if (aSign != bSign) {
         return parseFloat(-div) 
