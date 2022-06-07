@@ -1,6 +1,6 @@
 function repeat (str, num) {
-    var number = 0
-    var string = ''
+    let number = 0
+    let string = ''
     //make sure the variables have the correct values
     if (num === 'number') {
         number = num
@@ -9,7 +9,7 @@ function repeat (str, num) {
         number = str
         string = str
     }
-    var res = ''
+    let res = ''
     //loop and return the value each time
     for (let i = 0; i < number; i++) {
         res = res + string
