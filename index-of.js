@@ -13,7 +13,7 @@ const indexOf = (arr, val, start) => {
     return -1
 }
 
-const lastIndexOf = (arr, val) => {
+const lastIndexOf = (arr, val, start) => {
     //reverse the array
     var revArr = arr.reverse();
     //call index of on revArr
