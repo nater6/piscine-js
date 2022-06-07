@@ -14,12 +14,12 @@ const indexOf = (arr, val, start) => {
 }
 
 const lastIndexOf = (arr, val, start) => {
-    let i = 0
+    var upto = arr.length
     if (start != null) {
-        i = start
+        upto = start
     }
     let res = -1
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i <= upto; i++) {
         if (arr[i] == val) {
             res = i
         }
