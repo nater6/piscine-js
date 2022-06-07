@@ -6,7 +6,11 @@ const indexOf = (arr, val, start) => {
     //loop thorugh the array
     while (i < arr.length) {
         if (arr[i] == val) {
-            return i
+            if (start != null) {
+                return i - start
+            } else {
+                return i
+            }
         }
         i++
     }
@@ -18,7 +22,7 @@ const lastIndexOf = (arr, val) => {
     var revArr = arr.reverse();
     //call index of on revArr
     let res = revArr.length - indexOf(revArr, val)
-    return res-1
+    return res - 1
 }
 
 const includes = (arr, val) => {
