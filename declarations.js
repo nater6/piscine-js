@@ -25,4 +25,5 @@ const deepFreeze = obj => {
     });
     return Object.freeze(obj);
 };
+
 deepFreeze(nested)
