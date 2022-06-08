@@ -36,3 +36,27 @@ const trunc = (n) => {
 
     }
 }
+
+const divide = (a, b) => {
+    // check if a and b are negative
+    const aSign = Math.sign(a)
+    const bSign = Math.sign(b)
+
+    //make a and b absolute values
+    a = Math.abs(a)
+    b = Math.abs(b)
+
+    let div = 0
+    let i = 0
+    while (i < a) {
+        i += b
+        div++
+    }
+    div--
+
+    if ((aSign == bSign) == false) {
+        return parseFloat(-div)
+    } else {
+        return parseFloat(div)
+    }
+}

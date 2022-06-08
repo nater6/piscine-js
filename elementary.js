@@ -28,8 +28,6 @@ const divide = (a, b) => {
     a = Math.abs(a)
     b = Math.abs(b)
 
-
-
     let div = 0
     let i = 0
     while (i < a) {
@@ -43,8 +41,6 @@ const divide = (a, b) => {
     } else {
         return parseFloat(div)
     }
-
-
 }
 
 const modulo = (a, b) => {
