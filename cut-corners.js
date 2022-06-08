@@ -53,11 +53,11 @@ const floor = (n) => {
         return n;
     } else {
         if (r < 0) {
-            return n - (1+r)
+            return n - (1 + r)
         } else {
             return n - r;
         }
-        
+
     }
 };
 
@@ -94,4 +94,3 @@ const modulo = (a, b) => {
 
     return parseFloat(res);
 };
-
