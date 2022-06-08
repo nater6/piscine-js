@@ -16,7 +16,11 @@ const nasa = (N) => {
 
     let res = ''
     for (let k = 0; k < store.length; k++){
-        res += store[k]
+        res += store[k] 
+        if (k != store.length-1) {
+            res += ' '
+        }
+        
     }
     return res
 }
