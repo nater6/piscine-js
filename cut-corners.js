@@ -7,7 +7,7 @@ const round = (n) => {
         case (n >= Integer.MAX_VALUE):
             return Integer.MAX_VALUE
         default:
-            return parseFloat(n.toFixed())
+            return divide(n+0.499999999999999, 1)
     }
 }
 
