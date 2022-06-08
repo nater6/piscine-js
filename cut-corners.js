@@ -52,7 +52,12 @@ const floor = (n) => {
     if (r == 0) {
         return n;
     } else {
-        return n - r;
+        if (r < 0) {
+            return n - (1+r)
+        } else {
+            return n - r;
+        }
+        
     }
 };
 
