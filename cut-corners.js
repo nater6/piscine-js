@@ -15,14 +15,14 @@ const ceil = (n) => {
     if (n !== 'number') {
         return 0
     }
-    parseFloat((n + 0.499999999999999).toFixed())
+     return divide(n,1) + 1
 }
 
 const floor = (n) => {
     if (n !== 'number') {
         return 0
     }
-    parseFloat((n - 0.499999999999999).toFixed())
+    return divide(n, 1) - 1
 }
 
 const trunc = (n) => {
