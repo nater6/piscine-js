@@ -1,5 +1,6 @@
 const chunk = (arr, n) => {
-    let res, temp = [];
+    let temp = [];
+    let res = [];
     let add = n-1
 
     for (let i = 0; i < arr.length; i++) {
@@ -10,6 +11,6 @@ const chunk = (arr, n) => {
             temp = [];
             add += n
         }
-        
     }
+    return res
 }
