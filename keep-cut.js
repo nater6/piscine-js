@@ -13,7 +13,14 @@ const keepFirstLast = (str) => {
     let res = ''
     //add first to values to the string
     res = str.slice(0, 2)
-    //Add last two values to the string
-    res += str.slice(-2)
-    return res
+
+    switch (str.length) {
+        case 2:
+            return res;
+        case 3:
+            return res + str[2]
+        default:
+            return res + str.slice(-2)
+    }
+    
 }
