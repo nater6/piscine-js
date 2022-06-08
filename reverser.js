@@ -1,5 +1,5 @@
 const reverse = (val) => {
-    if (val === "string") {
+    if (val === 'string') {
         let res = "";
         for (let i = val.length - 1; i >= 0; i--) {
             res += val[i];
