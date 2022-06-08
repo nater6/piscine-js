@@ -1,6 +1,6 @@
 const round = (n) => {
     switch (n) {
-        case (n !== 'number'):
+        case Number.NaN:
             return 0
         case (n <= Integer.MIN_VALUE):
             return Integer.MIN_VALUE
@@ -12,14 +12,14 @@ const round = (n) => {
 }
 
 const ceil = (n) => {
-    if (n !== 'number') {
+    if (Number.NaN) {
         return 0
     }
      return divide(n,1) + 1
 }
 
 const floor = (n) => {
-    if (n !== 'number') {
+    if (Number.NaN) {
         return 0
     }
     return divide(n, 1) - 1
