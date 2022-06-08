@@ -8,7 +8,7 @@ const nasa = (N) => {
         if ((store[j] % 3 == 0) && (store[j] % 5 == 0)) {
             store[j] = "NASA"
         } else if (store[j] % 3 == 0) {
-            store[i] = "NA"
+            store[j] = "NA"
         } else if (store[j] % 5 == 0) {
             store[j] = "SA"
         }
