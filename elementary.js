@@ -45,27 +45,26 @@ const divide = (a, b) => {
 
 const modulo = (a, b) => {
     // check if a and b are negative
-    const aSign = Math.sign(a)
-    const bSign = Math.sign(b)
+    const aSign = Math.sign(a);
 
     //make a and b absolute values
-    a = Math.abs(a)
-    b = Math.abs(b)
-    var res = 0
+    a = Math.abs(a);
+    b = Math.abs(b);
+    var res = 0;
 
-    let i = 0
+    let i = 0;
     while (i <= a) {
-        i += b
+        i += b;
     }
 
     //minus the last b to find the last multiple of b below a
-    i -= b
+    i -= b;
 
     // the modulo is the difference between a and i
-    res = a - i
+    res = a - i;
     if (aSign < 0) {
-        res = -res
+        res = -res;
     }
 
-    return parseFloat(res)
-}
+    return parseFloat(res);
+};
