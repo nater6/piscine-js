@@ -36,7 +36,7 @@ const divide = (a, b) => {
     }
     div--
 
-    if ((aSign == bSign) == false) {
+    if (aSign != bSign) {
         return parseFloat(-div)
     } else {
         return parseFloat(div)
@@ -54,7 +54,7 @@ const modulo = (a, b) => {
     var res = 0
 
     let i = 0
-    while (i < a) {
+    while (i <= a) {
         i += b
     }
 
