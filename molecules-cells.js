@@ -1,5 +1,5 @@
 const RNA = (str) => {
-    const res = ''
+    let res = ''
 
     for (let i = 0; i < str.length; i++) {
         switch (str[i]) {
@@ -22,7 +22,7 @@ const RNA = (str) => {
 }
 
 const DNA = (str) => {
-    const res = ''
+    let res = ''
 
     for (let i = 0; i < str.length; i++) {
         switch (str[i]) {
