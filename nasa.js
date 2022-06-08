@@ -5,12 +5,12 @@ const nasa = (N) => {
     }
     // Loop through store 
     for (let j = 0; j <= store.length; j++) {
-        if ((store[i] % 3 == 0) && (store[i] % 5 == 0)) {
-            store[i] = "NASA"
-        } else if (store[i] % 3 == 0) {
+        if ((store[j] % 3 == 0) && (store[j] % 5 == 0)) {
+            store[j] = "NASA"
+        } else if (store[j] % 3 == 0) {
             store[i] = "NA"
-        } else if (store[i] % 5 == 0) {
-            store[i] = "SA"
+        } else if (store[j] % 5 == 0) {
+            store[j] = "SA"
         }
     }
 
