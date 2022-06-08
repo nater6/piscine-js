@@ -11,10 +11,18 @@ const round = (n) => {
             if (r == 0) {
                 return n;
             } else {
-                if (r < 0.5) {
-                    return n - r;
+                if (n > 0) {
+                    if (r < 0.5) {
+                        return n - r;
+                    } else {
+                        return n + (1 - r);
+                    }
                 } else {
-                    return n + (1 - r);
+                    if (r > -0.5) {
+                        return n - r;
+                    } else {
+                        return n - (1 + r);
+                    }
                 }
             }
     }
@@ -81,3 +89,4 @@ const modulo = (a, b) => {
 
     return parseFloat(res);
 };
+
