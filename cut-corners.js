@@ -62,6 +62,11 @@ const floor = (n) => {
 };
 
 const trunc = (n) => {
+    if (n >= 0xfffffffff) {
+        let res = n - 0xfffffffff
+        return trunc(res) + 0xfffffffff
+    }
+
     if (n >= 0) {
         return floor(n);
     } else {
