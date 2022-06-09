@@ -6,9 +6,6 @@ const pyramid = (x, n) => {
         let noOfChar = ((2 *i) - 1)
         let noOfSpaces = (((2*n) - 1) - noOfChar) * x.length
         noOfSpaces /= 2
-        console.log(i)
-        console.log('noOfChar: ' + noOfChar)
-        console.log('noOfSpaces: ' + noOfSpaces)
         //create a nested for loop that adds the number of spaces before the value
         for (let j = 0; j < noOfSpaces; j++) {
             res += ' '
@@ -17,7 +14,10 @@ const pyramid = (x, n) => {
         for (let k = 0; k < noOfChar; k++) {
             res += x
         }
-        res += '\n'
+        if (i != n) {
+            res += '\n'
+        }
+        
 
     }
     return res
