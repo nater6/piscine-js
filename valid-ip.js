@@ -8,7 +8,7 @@ const findIP = (str) => {
         for (let j = 0; j < temp.length; j++) {
             let test = temp[j].split(':')
             if (test.length == 2) {
-                if (test[1] > 68768) {
+                if (test[1] > 65535) {
                     push = false
                     continue
                 }
