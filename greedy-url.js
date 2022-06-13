@@ -1,5 +1,5 @@
 const getURL = (str) => {
-    const urlStart = /(https:\/\/|http:\/\/)\S+(?=\s)/g
+    const urlStart = /(https:\/\/|http:\/\/)\S+&\S+&(?=\s)/g
     const res = str.match(new RegExp(urlStart))
     return res
 }
