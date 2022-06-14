@@ -12,7 +12,3 @@ function countLeapYears(date) {
     return leapYears
 }
 
-const isLeapYear = (date) => {
-    let year = date.getFullYear()
-    return new Date(year, 1, 29).getDate() === 29
-}
