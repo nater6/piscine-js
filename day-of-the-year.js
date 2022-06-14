@@ -4,6 +4,7 @@ function dayOfTheYear(date) {
     if (date.getFullYear() == 0 && date.getMonth() == 11) {
         date.setMonth(0)
         date.setDate(1)
+        return 1
     }
 
     let monthDays = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
