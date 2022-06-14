@@ -5,7 +5,6 @@ function countLeapYears(date) {
     while (startYear < date.getFullYear()) {
         
         if (new Date(startYear, 1, 29).getDate() === 29) {
-            console.log(startYear)
             leapYears++
         }
         startYear++
