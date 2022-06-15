@@ -1,0 +1,1 @@
+const forEach = (arr, func,) => arr.map((element, index, arr) => func(element, index, arr))
