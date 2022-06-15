@@ -15,7 +15,6 @@ function vowelChecker(str) {
 const filter5Vowels = (arr) => arr.filter(vowelTimes)
 
 function vowelTimes(str) {
-    if (str == null) return false
     let vowels = 0
     for (let letter of str) {
         if (letter == 'A' || letter == 'a' || letter == 'E' || letter == 'e' || letter == 'I' || letter == 'i' || letter == 'O' || letter == 'o' || letter == 'U' || letter == 'u') vowels++
