@@ -34,5 +34,4 @@ function reduceRight(array, func) {
         result = func(result, elem)
     })
     return result
-
 }
