@@ -23,8 +23,9 @@ export const getActive = () => {
  }
 export const getBonannoPisano = () => {
     let bon = document.getElementById('BonannoPisano')
-    let nonBon = document.querySelectorAll('a.class.active:not(#BonannoPisano)')
+    let nonBon = document.querySelectorAll('a.classical.active:not(#BonannoPisano)')
     let arrNonBon = Array.prototype.slice.call(nonBon)
+    console.log([bon, arrNonBon])
     return [bon, arrNonBon]
   }
 
