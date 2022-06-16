@@ -11,7 +11,7 @@ export const build = (x) => {
         newDiv.setAttribute('id', 'brick-' + value.toString())
         value++
 
-        if (pos === 1) newDiv.setAttribute('foundation', 'true')
+        if (pos === 1) newDiv.setAttribute('data-foundation', 'true')
         pos++
         if (pos === 3) pos = 0
 
@@ -44,14 +44,14 @@ export const repair = (...htmlIds) => {
     function repairer(ids) {
         const curr = document.getElementById(ids)
         console.log(curr)
-        console.log(curr.hasAttribute('foundation'))
+        console.log(curr.hasAttribute('data-foundation'))
 
-        if (curr.hasAttribute('foundation')) {
-            curr.setAttribute('repaired', 'in progress')
+        if (curr.hasAttribute('data-foundation')) {
+            curr.setAttribute('data-repaired', 'in progress')
         } else {
-            curr.setAttribute('repaired', 'true')
+            curr.setAttribute('data-repaired', 'true')
         }
-        console.log(curr.getAttribute('repaired'))
+        console.log(curr.getAttribute('data-repaired'))
     }
 
     ids.forEach(element => {
