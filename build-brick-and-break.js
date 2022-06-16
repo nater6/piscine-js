@@ -1,5 +1,5 @@
 //Create a variable to use for a unique id and one to track the position
-let value = 0
+let value = 1
 let pos = 0
 
 
