@@ -5,7 +5,6 @@ export const getArchitects = () => {
     let arrNonArchs = Array.prototype.slice.call(nonArchs)
     return [arrArchs, arrNonArchs]
 }
- 
 
 export const getClassical = () => {
     let classical = document.querySelectorAll('.classical')
