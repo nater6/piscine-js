@@ -15,8 +15,8 @@ export const getClassical = () => {
     return [arrClass, arrNonClass]
  }
 export const getActive = () => { 
-    let active = document.querySelectorAll('.class.active')
-    let nonActive = document.querySelectorAll('.class:not(.active)')
+    let active = document.querySelectorAll('.classical.active')
+    let nonActive = document.querySelectorAll('.classical:not(.active)')
     let arrActive = Array.prototype.slice.call(active)
     let arrNonActive = Array.prototype.slice.call(nonActive)
     return [arrActive, arrNonActive]
