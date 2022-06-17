@@ -4,8 +4,8 @@ export function createCircle() {
         const newCirc = document.createElement('div')
         newCirc.setAttribute('class', 'circle')
         newCirc.setAttribute('id', 'Tester')
-        let x = event.clientX
-        let y = event.clientY
+        let x = event.clientX-25
+        let y = event.clientY-25
         newCirc.setAttribute('style', 'left: ' + x.toString() + 'px; top: ' + y.toString() + 'px; background: white;')
         const currentDiv = document.getElementById("div1");
         document.body.insertBefore(newCirc, currentDiv);
@@ -17,8 +17,8 @@ export function moveCircle() {
     document.addEventListener('mousemove', event => {
         const lastCircle = document.querySelector('div:last-child')
         // console.log(lastCircle)
-        lastCircle.style.left = `${event.clientX}px`
-        lastCircle.style.top = `${event.clientY}px`
+        lastCircle.style.left = `${event.clientX-25}px`
+        lastCircle.style.top = `${event.clientY-25}px`
         document.body.append(lastCircle)
         let midBox = document.querySelector('div.box')
         let dims = midBox.getBoundingClientRect()
@@ -38,35 +38,35 @@ export function moveCircle() {
             }
         }
 
-        if (event.clientX < (dims.x + 1) && lastCircle.style.background === 'var(--purple)') {
+        if (event.clientX-25 < (dims.x + 1) && lastCircle.style.background === 'var(--purple)') {
             console.log(lastCircle.style.left)
             lastCircle.style.left = (dims.x + 1).toString() + 'px'
 
-            if (event.clientY < (dims.top + 1)) {
+            if (event.clientY-25 < (dims.top + 1)) {
                 lastCircle.style.top = (dims.y + 1).toString() + 'px'
             }
-            console.log(event.clientY)
+            console.log(event.clientY-25)
             console.log(dims.bottom)
 
-            if (event.clientY > (dims.bottom - 51)) {
+            if (event.clientY-25 > (dims.bottom - 51)) {
                 lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
             }
-        } else if (event.clientX > (dims.right - 51) && lastCircle.style.background === 'var(--purple)') {
+        } else if (event.clientX-25 > (dims.right - 51) && lastCircle.style.background === 'var(--purple)') {
             lastCircle.style.left = (dims.right - 51).toString() + 'px'
 
-            if (event.clientY < (dims.top + 1)) {
+            if (event.clientY-25 < (dims.top + 1)) {
                 lastCircle.style.top = (dims.y + 1).toString() + 'px'
             }
-            console.log(event.clientY)
+            console.log(event.clientY-25)
             console.log(dims.bottom)
 
-            if (event.clientY > (dims.bottom - 51)) {
+            if (event.clientY-25 > (dims.bottom - 51)) {
                 lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
             }
-        } else if ((event.clientY > (dims.bottom - 51)) && lastCircle.style.background === 'var(--purple)') {
+        } else if ((event.clientY-25 > (dims.bottom - 51)) && lastCircle.style.background === 'var(--purple)') {
             lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
             
-        } else if ((event.clientY < (dims.top + 1)) && lastCircle.style.background === 'var(--purple)') {
+        } else if ((event.clientY-25 < (dims.top + 1)) && lastCircle.style.background === 'var(--purple)') {
             lastCircle.style.top = (dims.top + 1).toString() + 'px'
             
         }
