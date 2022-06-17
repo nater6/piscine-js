@@ -7,8 +7,6 @@ export function pimp() {
     //check if the button has the has the unpimp
     if (index == styles.length) {
         classVal.classList.toggle('unpimp')
-        const lastClass = Array.prototype.slice.call(classVal.classList)
-        classVal.classList.remove(lastClass[classVal.classList.length - 2])
         index = 0
     } else if (classVal.classList.contains('unpimp')) {
         if (classVal.classList.length == 2) {
