@@ -24,7 +24,7 @@ export function generateClasses() {
 }
 
 export function generateColdShades() {
-    const colorCheck = ['aqua', 'blue', 'green', 'cyan', 'navy', 'purple']
+    const colorCheck = ['aqua', 'blue','turquoise', 'green', 'cyan', 'navy', 'purple']
 
     colors.map(elem => {
         for (let i = 0; i < colorCheck.length; i++) {
