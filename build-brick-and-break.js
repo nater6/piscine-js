@@ -31,7 +31,6 @@ export const build = (x) => {
 
 export const destroy = () => {
     const lastBrick = document.querySelector('div:last-child')
-    console.log(lastBrick)
     lastBrick.remove();
     
 }
