@@ -9,7 +9,9 @@ export function pimp() {
         classVal.classList.toggle('unpimp')
         index = 0
     } else if (classVal.classList.contains('unpimp')) {
-        if (classVal.classList.length == 2) {
+        if (classVal.classList.length == 3) {
+            const lastClass = Array.prototype.slice.call(classVal.classList)
+            classVal.classList.remove(lastClass[classVal.classList.length - 2])
             classVal.classList.remove('unpimp')
         } else {
             const lastClass = Array.prototype.slice.call(classVal.classList)
@@ -22,4 +24,5 @@ export function pimp() {
         classVal.classList.add(addValue)
         index++
     }
+    console.log('CLASSES AFTER CLICK: ' , classVal.classList)
 }
