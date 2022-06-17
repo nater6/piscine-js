@@ -33,41 +33,41 @@ export function moveCircle() {
 
 
         if (lastCircle.getAttribute('class') !== 'box') {
-            if ((+lastCircle.style.left.replace('px', '') > (dims.x + 1)) && (+lastCircle.style.left.replace('px', '') < (dims.right - 51)) && (+lastCircle.style.top.replace('px', '') > (dims.top + 1)) && (+lastCircle.style.top.replace('px', '') < (dims.bottom - 51))) {
+            if ((+lastCircle.style.left.replace('px', '') > (dims.x )) && (+lastCircle.style.left.replace('px', '') < (dims.right - 50)) && (+lastCircle.style.top.replace('px', '') > (dims.top )) && (+lastCircle.style.top.replace('px', '') < (dims.bottom - 50))) {
                 lastCircle.style.background = 'var(--purple)'
             }
         }
 
-        if (event.clientX-25 < (dims.x + 1) && lastCircle.style.background === 'var(--purple)') {
+        if (event.clientX-25 < (dims.x) && lastCircle.style.background === 'var(--purple)') {
             console.log(lastCircle.style.left)
-            lastCircle.style.left = (dims.x + 1).toString() + 'px'
+            lastCircle.style.left = (dims.x ).toString() + 'px'
 
-            if (event.clientY-25 < (dims.top + 1)) {
-                lastCircle.style.top = (dims.y + 1).toString() + 'px'
+            if (event.clientY-25 < (dims.top )) {
+                lastCircle.style.top = (dims.y ).toString() + 'px'
             }
             console.log(event.clientY-25)
             console.log(dims.bottom)
 
-            if (event.clientY-25 > (dims.bottom - 51)) {
-                lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
+            if (event.clientY-25 > (dims.bottom - 50)) {
+                lastCircle.style.top = (dims.bottom - 50).toString() + 'px'
             }
-        } else if (event.clientX-25 > (dims.right - 51) && lastCircle.style.background === 'var(--purple)') {
-            lastCircle.style.left = (dims.right - 51).toString() + 'px'
+        } else if (event.clientX-25 > (dims.right - 50) && lastCircle.style.background === 'var(--purple)') {
+            lastCircle.style.left = (dims.right - 50).toString() + 'px'
 
-            if (event.clientY-25 < (dims.top + 1)) {
-                lastCircle.style.top = (dims.y + 1).toString() + 'px'
+            if (event.clientY-25 < (dims.top )) {
+                lastCircle.style.top = (dims.y ).toString() + 'px'
             }
             console.log(event.clientY-25)
             console.log(dims.bottom)
 
-            if (event.clientY-25 > (dims.bottom - 51)) {
-                lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
+            if (event.clientY-25 > (dims.bottom - 50)) {
+                lastCircle.style.top = (dims.bottom - 50).toString() + 'px'
             }
-        } else if ((event.clientY-25 > (dims.bottom - 51)) && lastCircle.style.background === 'var(--purple)') {
-            lastCircle.style.top = (dims.bottom - 51).toString() + 'px'
+        } else if ((event.clientY-25 > (dims.bottom - 50)) && lastCircle.style.background === 'var(--purple)') {
+            lastCircle.style.top = (dims.bottom - 50).toString() + 'px'
             
-        } else if ((event.clientY-25 < (dims.top + 1)) && lastCircle.style.background === 'var(--purple)') {
-            lastCircle.style.top = (dims.top + 1).toString() + 'px'
+        } else if ((event.clientY-25 < (dims.top )) && lastCircle.style.background === 'var(--purple)') {
+            lastCircle.style.top = (dims.top ).toString() + 'px'
             
         }
 
