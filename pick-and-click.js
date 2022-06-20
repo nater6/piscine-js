@@ -36,13 +36,13 @@ export function pick() {
     
 
     var axisX = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    axisX.setAttributeNS(null, 'id', 'axisX')
+    axisX.setAttributeNS(null, 'id', 'axisY')
     axisX.setAttributeNS(null, 'x1', 0)
     axisX.setAttributeNS(null, 'x2', 0)
     axisX.setAttributeNS(null, 'y1', 0)
     axisX.setAttributeNS(null, 'y2', 0)
     var axisY = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    axisY.setAttributeNS(null, 'id', 'axisY')
+    axisY.setAttributeNS(null, 'id', 'axisX')
     axisY.setAttributeNS(null, 'y1', 0)
     axisY.setAttributeNS(null, 'y2', 0)
     axisY.setAttributeNS(null, 'x1',0)
@@ -64,13 +64,13 @@ export function pick() {
         let windowHeight = document.documentElement.clientHeight;
         let y = event.clientY;
 
-        let hueVal = Math.round((x / windowWidth) * 360)
-        let lumVal = Math.round((y / windowHeight) * 100)
+        let hueVal = (x / windowWidth) * 360
+        let lumVal = (y / windowHeight) * 100
         // hueValue = document.createTextNode(`hue ${hueVal}`)
-        hueDiv.textContent = `hue \n ${hueVal}`
-        lumDiv.textContent = `luminosity \n ${lumVal}`
-        hslDiv.textContent = `hsl(${hueVal}, 50%, ${lumVal}%)`
-        document.body.style.background = `hsl(${hueVal}, 50%, ${lumVal}%)`
+        hueDiv.textContent = `hue \n ${Math.round(hueVal)}`
+        lumDiv.textContent = `luminosity \n ${Math.round(lumVal)}`
+        hslDiv.textContent = `hsl(${Math.round(hueVal)}, 50%, ${Math.round(lumVal)}%)`
+        document.body.style.background = `hsl(${Math.round(hueVal)}, 50%, ${Math.round(lumVal)}%)`
        
         let lineX = document.getElementById('axisX')
         lineX.setAttributeNS(null, 'x1', 0)
