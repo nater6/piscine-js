@@ -2,22 +2,24 @@ import { gossips } from "./gossip-grid.data.js";
 
 export function grid() {
     //Create the gossip adding form card
-    let adder = document.createElement('div')
-    adder.setAttribute('class', 'gossip')
+   
 
     //Create the form
     let form = document.createElement('form')
+    form.className = 'gossip'
+    document.body.append(form)
     //TextArea
     const textArea = document.createElement('textarea')
     form.append(textArea)
+    document.body.append(form)
     //Button
     const button = document.createElement('button')
     button.setAttribute('type', 'submit')
     button.textContent = "Share gossip!"
     form.append(button)
     //Append the form and adder box to the body
-    adder.append(form)
-    document.body.append(adder)
+    
+    
 
     button.addEventListener('click', e => {
 
