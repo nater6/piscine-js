@@ -81,7 +81,7 @@ export function grid() {
     rangeThree.setAttribute('type', 'range')
     rangeThree.setAttribute('id', 'background')
     rangeThree.setAttribute('class', 'range')
-    rangeThree.min = '25'
+    rangeThree.min = '20'
     rangeThree.max = '75'
     rangeThree.value = '50'
 
