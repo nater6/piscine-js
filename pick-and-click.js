@@ -28,17 +28,41 @@ export function pick() {
     lumDiv.appendChild(lumValue)
     const prev1Div = document.getElementById("div1");
     document.body.insertBefore(lumDiv, prev1Div);
+
+
+    let svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    svg.setAttributeNS(null, 'height', window.innerHeight)
+    svg.setAttributeNS(null, 'width', window.innerWidth)
+    
+
     var axisX = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    axisX.setAttributeNS('null', 'id', 'axisX')
+    axisX.setAttributeNS(null, 'id', 'axisX')
+    axisX.setAttributeNS(null, 'x1', 0)
+    axisX.setAttributeNS(null, 'x2', 0)
+    axisX.setAttributeNS(null, 'y1', 0)
+    axisX.setAttributeNS(null, 'y2', 0)
     var axisY = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-    axisY.setAttributeNS('null', 'id', 'axisY')
+    axisY.setAttributeNS(null, 'id', 'axisY')
+    axisY.setAttributeNS(null, 'y1', 0)
+    axisY.setAttributeNS(null, 'y2', 0)
+    axisY.setAttributeNS(null, 'x1',0)
+    axisY.setAttributeNS(null, 'x2', 0)
+    axisX.style.stroke = 'white'
+    axisX.style.strokeWidth = '1'
+    axisY.style.stroke = 'white'
+    axisY.style.strokeWidth = '1'
+    svg.append(axisX, axisY)
+
+    document.body.append(svg)
+
+
+
     document.addEventListener('mousemove', event => {
 
         let windowWidth = document.documentElement.clientWidth;
         let x = event.clientX;
         let windowHeight = document.documentElement.clientHeight;
         let y = event.clientY;
-        console.log(x, y)
 
         let hueVal = Math.round((x / windowWidth) * 360)
         let lumVal = Math.round((y / windowHeight) * 100)
@@ -48,16 +72,32 @@ export function pick() {
         hslDiv.textContent = `hsl(${hueVal}, 50%, ${lumVal}%)`
         document.body.style.background = `hsl(${hueVal}, 50%, ${lumVal}%)`
        
-        axisX.setAttributeNS('null', 'x1', x.toString())
-        axisX.setAttributeNS('null', 'x2', x.toString())
-        axisY.setAttributeNS('null', 'y1', y.toString())
-        axisY.setAttributeNS('null', 'y2', y.toString())
-        document.body.append(axisX)
-        document.body.append(axisY)
+        let lineX = document.getElementById('axisX')
+        lineX.setAttributeNS(null, 'x1', 0)
+        lineX.setAttributeNS(null, 'x2', window.innerWidth)
+        lineX.setAttributeNS(null, 'y1', event.clientY)
+        lineX.setAttributeNS(null, 'y2', event.clientY)
+        
+        let lineY = document.getElementById('axisY')
+        lineY.setAttributeNS(null, 'y1', 0)
+        lineY.setAttributeNS(null, 'y2', window.innerHeight)
+        lineY.setAttributeNS(null, 'x1', event.clientX)
+        lineY.setAttributeNS(null, 'x2', event.clientX)
+       
+        lineX.style.stroke = 'white'
+        lineX.style.strokeWidth = '1'
+        lineY.style.stroke = 'white'
+        lineY.style.strokeWidth = '1'
+
+        svg.append(lineY)
+        svg.append(lineX)
+        
     })
 
     document.addEventListener('click', event => {
-        event.clipboardData.setData('text/plain', `hsl( ${hueVal.toString()}, 50%, ${lumVal.toString()}%)`)
+        let copyValue = document.querySelector('.hsl').innerHTML
+        navigator.clipboard.writeText(copyValue)
+    
     })
 
 
