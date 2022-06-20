@@ -72,13 +72,13 @@ export function pick() {
         hslDiv.textContent = `hsl(${Math.round(hueVal)}, 50%, ${Math.round(lumVal)}%)`
         document.body.style.background = `hsl(${Math.round(hueVal)}, 50%, ${Math.round(lumVal)}%)`
        
-        let lineX = document.getElementById('axisX')
+        let lineX = document.getElementById('axisY')
         lineX.setAttributeNS(null, 'x1', 0)
         lineX.setAttributeNS(null, 'x2', window.innerWidth)
         lineX.setAttributeNS(null, 'y1', event.clientY)
         lineX.setAttributeNS(null, 'y2', event.clientY)
         
-        let lineY = document.getElementById('axisY')
+        let lineY = document.getElementById('axisX')
         lineY.setAttributeNS(null, 'y1', 0)
         lineY.setAttributeNS(null, 'y2', window.innerHeight)
         lineY.setAttributeNS(null, 'x1', event.clientX)
