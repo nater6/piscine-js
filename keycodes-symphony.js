@@ -1,6 +1,6 @@
 export function compose() {
     document.addEventListener('keydown', event => {
-        let lowercase = 'abcdefghijklmnopqrstuvwxyz'
+        let lowercase = 'abcaadefghijklmnopqrstuvwxyz'
         if (lowercase.includes(event.key)) {
             const newDiv = document.createElement('div')
             newDiv.setAttribute('class', 'note')
@@ -8,10 +8,8 @@ export function compose() {
 
 
             const newContent = document.createTextNode(event.key);
-            newDiv.appendChild(newContent);
-
-            const currentDiv = document.getElementById("div1");
-            document.body.insertBefore(newDiv, currentDiv);
+            newDiv.appendChild(newContent); 
+            document.body.append(newDiv);
 
         } else if (event.key == 'Backspace') {
             const lastBrick = document.querySelector('div:last-child')
