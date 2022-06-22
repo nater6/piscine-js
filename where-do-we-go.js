@@ -45,10 +45,6 @@ export function explore() {
         return bSec - aSec
 
     })
-    //Make the page go to the top when refreshed
-    // window.onbeforeunload = function () {
-    //     window.scrollTo(0, 0);
-    // }
 
     //create the compass div
     const compass = document.createElement('div')
@@ -70,10 +66,6 @@ export function explore() {
             compass.innerHTML = 'N'
         }
         oldValue = newValue;
-
-        // let val = (Math.round(window.scrollY / window.innerHeight))
-        // console.log(window.scrollY, window.innerHeight, window.scrollY/window.innerHeight)
-        // console.log(typeof val, val)
     });
 
     //Create the anchortag
@@ -100,40 +92,10 @@ export function explore() {
         valChanger.forEach(
             entry => {
                 if (entry.isIntersecting === true) {
-                    // console.log('----INTERSECTING!!!!!!!!111111!!!!---------------------------------------------------------------')
-
-                    // const compassElem = document.querySelector('div')
-                    // const anchorTag = document.querySelector('a')
-                    // if (compassElem.innerHTML === 'N') {
-                    //     if (scrolled) loc--
-                    //     anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
-                    //     newA.style.color = orderedPlaces[loc].color
-                    //     newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
-                    //     newA.target = '_blank'
-                    // } else {
-
-                    //     loc++
-                    //     anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
-                    //     newA.style.color = orderedPlaces[loc].color
-                    //     newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
-                    //     newA.target = '_blank'
-                    // }
-
-                    // let displayLoc = orderedPlaces[Math.round(window.scrollY / (window.innerHTML/2))]
-                    // console.log(window.scrollY, window.innerHeight);
-                    // console.log(displayLoc)
-                    // newA.innerHTML = `${displayLoc.name}\n${displayLoc.coordinates}`
-                    // newA.style.color = displayLoc.color
-                    // newA.href = `https://www.google.com/maps/place/${displayLoc.coordinates}`
-                    // anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
-                    
                     let val = (Math.round(window.scrollY / window.innerHeight))
-
                     newA.innerHTML = `${orderedPlaces[val].name}\n${orderedPlaces[val].coordinates}`
                     newA.style.color = orderedPlaces[val].color
                     newA.href = `https://www.google.com/maps/place/${orderedPlaces[val].coordinates}`
-
-
                 }
             }
         )
@@ -141,6 +103,4 @@ export function explore() {
 
     const sections = document.querySelectorAll('section')
     sections.forEach(section => observer.observe(section))
-
-
 }
