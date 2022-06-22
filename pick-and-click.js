@@ -14,7 +14,7 @@ export function pick() {
     const hueDiv = document.createElement('div')
     hueDiv.setAttribute('class', 'text hue')
     hueDiv.setAttribute('style', 'position: absolute;')
-    let hueValue = document.createTextNode(`hue 0`)
+    let hueValue = document.createTextNode(`hue 0`);
     hueDiv.appendChild(hueValue)
     const prevDiv = document.getElementById("div1");
     document.body.insertBefore(hueDiv, prevDiv);

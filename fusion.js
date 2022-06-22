@@ -1,7 +1,7 @@
-function fusion(...obj) {
+function fusion(a, b) {
     let result = {}
     let allArr = true, allStr = true, allNum = true, allObj = true
-    let args = obj
+    let args = [a,b]
 
     args.forEach(obje => {
         Object.keys(obje).forEach(key => {
@@ -17,8 +17,6 @@ function fusion(...obj) {
             )
             if (!(typeof obje[key] == 'object' && !Array.isArray(obje[key]))) {
                 allObj = false
-
-
             }
 
         }
@@ -26,7 +24,7 @@ function fusion(...obj) {
 
 
     })
-    console.log('-----------------------', allObj)
+    
 
     if (allArr) {
         //Go through args and add 
@@ -72,26 +70,18 @@ function fusion(...obj) {
         })
         return result
     } else if (allObj) {
-        args.forEach(obj => {
+        console.log('IN OBJECT BRANCH');
 
-            Object.keys(obj).forEach(key => {
-
-                if (result[key] === undefined) {
-                    result[key] = obj[key]
-
-                } else {
-                    result[key] += obj[key]
-                }
+        if (Object.keys(a).length > Object.keys(b).length) {
+            Object.keys(a).forEach(key => {
+                return result[key] = fusion(a[key], b[key])
             })
-        })
-
-        // Object.keys(obj).forEach(key => {
-        //     result[key] = fusion(args[0][key], args[1][key])
-        result = { a: { b: [1, 2, 0, 2, 1], c: { d: 25 } } }
-        // })
-
-
+        } else {
+            Object.keys(b).forEach(key =>  result[key] = fusion(a[key], b[key]))
+        }
+        console.log(result);
         return result
+
     } else {
         args.forEach(obj => {
 
@@ -99,7 +89,13 @@ function fusion(...obj) {
                 result[key] = obj[key]
             })
         })
+        console.log(result)
         return result
     }
 
 }
+
+console.log(fusion(
+    { a: { b: [1, 2], c: { d: 2 } } },
+    { a: { b: [0, 2, 1], c: { d: 23 } } }
+));
