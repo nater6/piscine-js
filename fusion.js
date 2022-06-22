@@ -1,7 +1,7 @@
-function fusion(a, b) {
+function fusion1(...objs) {
     let result = {}
     let allArr = true, allStr = true, allNum = true, allObj = true
-    let args = [a,b]
+    let args = objs
 
     args.forEach(obje => {
         Object.keys(obje).forEach(key => {
@@ -24,9 +24,10 @@ function fusion(a, b) {
 
 
     })
-    
+
 
     if (allArr) {
+        console.log("ARRAY BRANCH");
         //Go through args and add 
         args.forEach(obj => {
 
@@ -43,6 +44,7 @@ function fusion(a, b) {
         })
         return result
     } else if (allStr) {
+        console.log("STRING BRANCH");
         args.forEach(obj => {
 
             Object.keys(obj).forEach(key => {
@@ -56,6 +58,7 @@ function fusion(a, b) {
         })
         return result
     } else if (allNum) {
+        console.log("NUMBERS BRANCH");
         args.forEach(obj => {
 
             Object.keys(obj).forEach(key => {
@@ -71,18 +74,16 @@ function fusion(a, b) {
         return result
     } else if (allObj) {
         console.log('IN OBJECT BRANCH');
+        args.forEach(obj => {
 
-        if (Object.keys(a).length > Object.keys(b).length) {
-            Object.keys(a).forEach(key => {
-                return result[key] = fusion(a[key], b[key])
+            Object.keys(obj).forEach(key => {
+                result[key] = fusion(obj[key])
             })
-        } else {
-            Object.keys(b).forEach(key =>  result[key] = fusion(a[key], b[key]))
-        }
+        })
         console.log(result);
         return result
-
     } else {
+        console.log("NOT MATCHING");
         args.forEach(obj => {
 
             Object.keys(obj).forEach(key => {
@@ -95,7 +96,26 @@ function fusion(a, b) {
 
 }
 
-console.log(fusion(
-    { a: { b: [1, 2], c: { d: 2 } } },
-    { a: { b: [0, 2, 1], c: { d: 23 } } }
-));
+function fusion(a, b) {
+    let result = {};
+    let use = Object.keys(a).length > Object.keys(b).length ? a : b
+    Object.keys(use).forEach((key) => {
+        if (Array.isArray(a[key]) && Array.isArray(b[key])) {
+            result[key] = a[key].concat(b[key])
+        } else if (typeof a[key] === 'string' && typeof b[key] === 'string') {
+            result[key] = a[key] + ' ' + b[key]
+        } else if (typeof a[key] === 'number' && typeof b[key] === 'number') {
+            result[key] = a[key] + b[key]
+        } else if (typeof a[key] === 'object' && typeof b[key] === 'object' && a[key] !== null && b[key] !== null) {
+            result[key] = fusion(a[key], b[key])
+        } else {
+            if (b[key] !== undefined) {
+                result[key] = b[key]
+            } else {
+                result[key] = a[key]
+            }
+
+        }
+    })
+    return result
+}
