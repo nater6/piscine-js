@@ -1,5 +1,4 @@
 import { places } from "./where-do-we-go.data.js"
-import { images } from 
 
 export function explore() {
     let orderedPlaces = places.sort((a, b) => {
