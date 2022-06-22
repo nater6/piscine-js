@@ -1,4 +1,5 @@
 import { places } from "./where-do-we-go.data.js"
+import { images } from 
 
 export function explore() {
     let orderedPlaces = places.sort((a, b) => {
@@ -102,7 +103,7 @@ export function explore() {
 
         const newSect = document.createElement('section')
         newSect.id = i.toString()
-        let imageLoc = orderedPlaces[i].name.split(',')[0].split(' ').join('-')
+        let imageLoc = orderedPlaces[i].name.toLowerCase().split(',')[0].split(' ').join('-')
         newSect.style.background = `URL('./where-do-we-go_images/${imageLoc}.jpg')`
         document.body.append(newSect)
     }
