@@ -112,22 +112,24 @@ export function explore() {
             entry => {
                 if (entry.isIntersecting) {
 
-                    const compassElem = document.querySelector('div')
-                    const anchorTag = document.querySelector('a')
-                    if (compassElem.innerHTML === 'N') {
-                        if (scrolled) loc--
-                        anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
-                        newA.style.color = orderedPlaces[loc].color
-                        newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
-                        newA.target = '_blank'
-                    } else {
+                    // const compassElem = document.querySelector('div')
+                    // const anchorTag = document.querySelector('a')
+                    // if (compassElem.innerHTML === 'N') {
+                    //     if (scrolled) loc--
+                    //     anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
+                    //     newA.style.color = orderedPlaces[loc].color
+                    //     newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
+                    //     newA.target = '_blank'
+                    // } else {
 
-                        loc++
-                        anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
-                        newA.style.color = orderedPlaces[loc].color
-                        newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
-                        newA.target = '_blank'
-                    }
+                    //     loc++
+                    //     anchorTag.innerHTML = `${orderedPlaces[loc].name}\n${orderedPlaces[loc].coordinates}`
+                    //     newA.style.color = orderedPlaces[loc].color
+                    //     newA.href = `https://www.google.com/maps/place/${orderedPlaces[loc].coordinates}`
+                    //     newA.target = '_blank'
+                    // }
+
+                    let displayLoc = sorted[Math.round(window.scrollY/ window.innerHTML)]
 
                 }
             }
