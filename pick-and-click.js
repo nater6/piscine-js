@@ -89,8 +89,8 @@ export function pick() {
         lineY.style.stroke = 'white'
         lineY.style.strokeWidth = '1'
 
-        svg.append(lineY)
-        svg.append(lineX)
+        // svg.append(lineY)
+        // svg.append(lineX)
         
     })
 
