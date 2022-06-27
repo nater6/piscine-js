@@ -96,6 +96,13 @@ export function explore() {
                     newA.innerHTML = `${orderedPlaces[val].name}\n${orderedPlaces[val].coordinates}`
                     newA.style.color = orderedPlaces[val].color
                     newA.href = `https://www.google.com/maps/place/${orderedPlaces[val].coordinates}`
+                    console.log(newA.href);
+                    console.log('TEST',newA.href.split('%C2%B0')
+                        .join('°')
+                        .split('%22')
+                        .join('"')
+                        .split('%20')
+                        .join(' '));
                 }
             }
         )
